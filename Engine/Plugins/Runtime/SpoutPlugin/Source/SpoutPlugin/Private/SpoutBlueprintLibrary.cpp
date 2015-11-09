@@ -8,11 +8,13 @@ USpoutBlueprintLibrary::USpoutBlueprintLibrary(const FObjectInitializer& PCIP)
 {
 }
 
-void USpoutBlueprintLibrary::SetSpoutSenderTextureSource(UTextureRenderTarget2D* SourceTexture)
+//void USpoutBlueprintLibrary::SetSpoutSenderTextureSource(UTextureRenderTarget2D* SourceTexture)
+void USpoutBlueprintLibrary::SetSpoutSenderTextureSource(TArray<UTextureRenderTarget2D*> SourceTextures)
 {
 	if (ISpoutPlugin::IsAvailable())
 	{
-		ISpoutPlugin::Get().SetSpoutTextureSource(SourceTexture);
+		//ISpoutPlugin::Get().SetSpoutTextureSource(SourceTexture);
+		ISpoutPlugin::Get().SetSpoutTextureSource(SourceTextures);
 	}
 	
 }

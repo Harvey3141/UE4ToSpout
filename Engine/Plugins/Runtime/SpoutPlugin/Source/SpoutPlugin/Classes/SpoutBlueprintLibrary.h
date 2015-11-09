@@ -11,7 +11,8 @@ class SPOUTPLUGIN_API USpoutBlueprintLibrary : public UBlueprintFunctionLibrary
 	GENERATED_UCLASS_BODY()
 
 	UFUNCTION(BlueprintCallable, Category = "Spout")
-	static void SetSpoutSenderTextureSource(UTextureRenderTarget2D* SourceTexture);
+	//static void SetSpoutSenderTextureSource(UTextureRenderTarget2D* SourceTexture);
+	static void SetSpoutSenderTextureSource(TArray<UTextureRenderTarget2D*> SourceTextures);
 
 	UFUNCTION(BlueprintCallable, Category = "Spout")
 	static UTextureRenderTarget2D* CreateRenderTarget2DWithOneCopy(int32 Width, int32 Height);

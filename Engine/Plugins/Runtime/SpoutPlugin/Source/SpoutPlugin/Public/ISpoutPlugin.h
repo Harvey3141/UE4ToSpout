@@ -35,7 +35,8 @@ public:
 		return FModuleManager::Get().IsModuleLoaded("SpoutPlugin");
 	}
 
-	virtual void SetSpoutTextureSource(class UTextureRenderTarget2D* SourceTexture) {}
+	//virtual void SetSpoutTextureSource(class UTextureRenderTarget2D* SourceTexture) {}
+	virtual void SetSpoutTextureSource(class TArray<UTextureRenderTarget2D*> SourceTextures) {}
 	virtual void DrawToSender() {}
 };
 
